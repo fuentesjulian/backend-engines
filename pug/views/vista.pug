@@ -1,0 +1,30 @@
+html 
+    head 
+        meta
+        title 
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous")
+        link(rel='stylesheet', type='text/css', href='/css/vista.css')
+    body 
+    
+        div(class="container mt-3")
+            div(class="jumbotron")
+                h1 Vista de productos
+                br
+                if hayProductos
+                    div(class="table-responsive")
+                        table(class="table table-dark")
+                            tr 
+                                th Nombre
+                                th Precio 
+                                th Foto
+                        
+                            each producto in productos
+                                tr
+                                    td!=producto.title 
+                                    td!=producto.price 
+                                    td 
+                                        img(src!=producto.thumbnail)
+                else 
+                    h3(class="alert alert-warning") No se encontraron productos
+                br
+                a(type="button" class="btn btn-primary" href='/') Cargar un nuevo producto

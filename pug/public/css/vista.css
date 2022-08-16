@@ -1,0 +1,19 @@
+.table td,
+.table th {
+  vertical-align: middle;
+}
+td img {
+  max-height: 4em;
+}
+
+h1 {
+  color: blue;
+}
+
+hr {
+  background-color: #ddd;
+}
+
+.jumbotron {
+  min-height: 100vh;
+}
